@@ -5,7 +5,7 @@ math: true
 
 
 To make sure everything works as expected and looks pretty, on this page, we will explore how different types of content are displayed by this theme.
-
+This is Jean writing some stuff!
 
 ## Headings
 
