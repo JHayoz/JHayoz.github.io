@@ -1,3 +1,3 @@
 [submodule "themes/barks"]
-	path = themes/barks
+	path = "themes/barks @ 6849302"
 	url = https://github.com/timothygebhard/barks
