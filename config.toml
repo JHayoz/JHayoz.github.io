@@ -1,6 +1,6 @@
 
 # Global options
-baseURL = "/"
+baseURL = "https://jhayoz.github.io"
 canonifyURLs = true
 copyright = "© 2021 by Carl Barks. <a href='/privacy'>Privacy policy</a>."
 defaultContentLanguage = "en"
