@@ -4,7 +4,7 @@ export const publications = [
     title: "Observational constraints on the chemical tracers of planet formation history: A systematic survey of 13 directly-imaged low-mass companions with VLT/ERIS",
     authors: "Hayoz, J., M. J. Bonse, E. O. Garvin, G. Cugno, F. Dannert, H. Kühnle, R. J. De Rosa, A. Agudo Berbel, Y. Cao, G. Orban de Xivry, T. Stolker, R. Davies, O. Absil et al.",
     reference: "In preparation (submitted)",
-    link: "", // ADS link missing
+    link: null, // ADS link missing
   },
   {
     title: "High-contrast spectroscopy with the new VLT/ERIS instrument: Molecular maps and radial velocity of the gas giant AF Lep b",

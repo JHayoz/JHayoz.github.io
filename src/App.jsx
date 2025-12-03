@@ -52,12 +52,20 @@ function App() {
           )}
           {activeSection === 'projects' && (
             <ContentSection id="projects" title="Research Projects">
-              {/* Projects content will be managed in Feature 5 */}
+              <div className="space-y-6">
+                  {projects.map((project) => (
+                      <ProjectCard key={project.id} project={project} /> // Use the new card here
+                  ))}
+              </div>
             </ContentSection>
           )}
           {activeSection === 'talks' && (
-            <ContentSection id="talks" title="Talks and Posters (Conference Contributions)">
-              {/* Talks content goes here */}
+            <ContentSection id="talks" title="Talks and Posters">
+              <div className="space-y-6">
+                  {talks.map((talk, index) => (
+                      <TalkCard key={index} talk={talk} />
+                  ))}
+              </div>
             </ContentSection>
           )}
           {activeSection === 'contact' && (
