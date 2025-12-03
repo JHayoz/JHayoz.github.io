@@ -14,9 +14,6 @@ const Profile = () => (
         <p className="mb-4">
           I am fluent in French, English, German, and Swiss German.
         </p>
-        <p className="mb-4">
-          You can reach me at jeanhayoz94 [at] gmail [dot] com.
-        </p>
         
         <h3 className="text-xl font-semibold mb-2" id="contact">Contact</h3>
         <p className="mb-4">
@@ -32,7 +29,7 @@ const Profile = () => (
         {/* Remember to place your image file in the 'public' folder or import it */}
         
         <img 
-          src=".public/Jean_Paranal_2022_ERISCOM.JPG" // Path assumes image is in the 'public' folder
+          src="/images/Jean_Paranal_2022_ERISCOM.JPG" // Path assumes image is in the 'public' folder
           alt="Jean at Paranal"
           className="rounded-lg shadow-xl w-full h-auto object-cover"
         />
