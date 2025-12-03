@@ -10,7 +10,7 @@ import { projects } from './data/projects';
 import { talks } from './data/talks';
 import { ThemeContext } from './context/ThemeContext'; // Import ThemeContext
 
-const sections = ['about', 'publications', 'projects', 'talks', 'contact'];
+const sections = ['about', 'publications', 'projects', 'talks'];
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');

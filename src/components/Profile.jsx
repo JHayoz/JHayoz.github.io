@@ -32,7 +32,7 @@ const Profile = () => (
         {/* Remember to place your image file in the 'public' folder or import it */}
         
         <img 
-          src="/Jean_Paranal_2022_ERISCOM.JPG" // Path assumes image is in the 'public' folder
+          src=".public/Jean_Paranal_2022_ERISCOM.JPG" // Path assumes image is in the 'public' folder
           alt="Jean at Paranal"
           className="rounded-lg shadow-xl w-full h-auto object-cover"
         />
