@@ -11,9 +11,17 @@ const PublicationCard = ({ pub }) => (
       href={pub.link} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="inline-block px-3 py-1 text-sm bg-accent hover:bg-opacity-90 text-white rounded-full transition-colors duration-200"
+      className="inline-block 
+                 p-2 
+                 border 
+                 border-gray-300 dark:border-gray-600 
+                 rounded-md 
+                 text-gray-700 dark:text-gray-300 
+                 hover:bg-gray-100 dark:hover:bg-gray-700 
+                 transition-colors 
+                 duration-200"
     >
-      View ADS Entry
+      View Publication
     </a>
   </div>
 );
