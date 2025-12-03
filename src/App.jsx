@@ -3,7 +3,11 @@ import ContentSection from './components/ContentSection';
 import React, { useState,useContext } from 'react'; // Import useContext
 import Sidebar from './components/Sidebar'; // We will create this
 import PublicationCard from './components/PublicationCard';
+import TalkCard from './components/TalkCard';
+import ProjectCard from './components/ProjectCard';
 import { publications } from './data/publications';
+import { projects } from './data/projects';
+import { talks } from './data/talks';
 import { ThemeContext } from './context/ThemeContext'; // Import ThemeContext
 
 const sections = ['about', 'publications', 'projects', 'talks', 'contact'];
@@ -66,11 +70,6 @@ function App() {
                       <TalkCard key={index} talk={talk} />
                   ))}
               </div>
-            </ContentSection>
-          )}
-          {activeSection === 'contact' && (
-            <ContentSection id="contact" title="Contact">
-              {/* Contact content goes here (or integrate into Profile) */}
             </ContentSection>
           )}
         </div>
