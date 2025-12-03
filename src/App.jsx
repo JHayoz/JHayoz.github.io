@@ -1,35 +1,75 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Profile from './components/Profile';
+import ContentSection from './components/ContentSection';
+import React, { useState,useContext } from 'react'; // Import useContext
+import Sidebar from './components/Sidebar'; // We will create this
+import PublicationCard from './components/PublicationCard';
+import publications from './data/publications';
+import { ThemeContext } from './context/ThemeContext'; // Import ThemeContext
+
+const sections = ['about', 'publications', 'projects', 'talks', 'contact'];
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [activeSection, setActiveSection] = useState('about');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // For mobile menu
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    // The main container needs to be min-h-screen
+    <div className="min-h-screen flex bg-gray-50 dark:bg-gray-900 text-primary-text dark:text-gray-100 transition-colors duration-300">
+
+      {/* Sidebar Component (Fixed Left Column) */}
+      <Sidebar 
+        sections={sections}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+        toggleTheme={toggleTheme} // Pass toggle function
+        theme={theme}
+      />
+
+      {/* Main Content Area (Scrollable Right Column) */}
+      <main className="flex-grow p-4 md:p-8 ml-0 md:ml-64 transition-all duration-300">
+
+        {/* Mobile Burger Menu Button */}
+        <button 
+            className="fixed top-4 left-4 md:hidden z-50 p-2 rounded-md bg-white dark:bg-gray-800 shadow-md"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        >
+            {isSidebarOpen ? '✕' : '☰'}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+        <div className="max-w-4xl mx-auto">
+          {/* Conditional Rendering: Only show the active section */}
+          {activeSection === 'about' && <Profile />}
+          {activeSection === 'publications' && (
+            <ContentSection id="publications" title="Publications">
+              <div className="space-y-6">
+                  {publications.map((pub, index) => (
+                      <PublicationCard key={index} pub={pub} />
+                  ))}
+              </div>
+            </ContentSection>
+          )}
+          {activeSection === 'projects' && (
+            <ContentSection id="projects" title="Research Projects">
+              {/* Projects content will be managed in Feature 5 */}
+            </ContentSection>
+          )}
+          {activeSection === 'talks' && (
+            <ContentSection id="talks" title="Talks and Posters (Conference Contributions)">
+              {/* Talks content goes here */}
+            </ContentSection>
+          )}
+          {activeSection === 'contact' && (
+            <ContentSection id="contact" title="Contact">
+              {/* Contact content goes here (or integrate into Profile) */}
+            </ContentSection>
+          )}
+        </div>
+
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
