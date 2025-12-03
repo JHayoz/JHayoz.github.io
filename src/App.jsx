@@ -3,7 +3,7 @@ import ContentSection from './components/ContentSection';
 import React, { useState,useContext } from 'react'; // Import useContext
 import Sidebar from './components/Sidebar'; // We will create this
 import PublicationCard from './components/PublicationCard';
-import publications from './data/publications';
+// import publications from './data/publications';
 import { ThemeContext } from './context/ThemeContext'; // Import ThemeContext
 
 const sections = ['about', 'publications', 'projects', 'talks', 'contact'];
