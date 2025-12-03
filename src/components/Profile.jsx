@@ -11,12 +11,15 @@ const Profile = () => (
         <p className="mb-4">
           Before my doctorate, I completed both my Bachelor (2015-2018) and Master (2018-2021) in Physics at ETH Zurich. I was already a teaching assistant whilst studying for my Bachelor and Master, giving Linear Algebra and Analysis courses to Physics and Mathematics Bachelor students. I was so passionate that I obtained an award from the Department of Mathematics for excellent teaching.
         </p>
-        <p className="mb-8">
+        <p className="mb-4">
           I am fluent in French, English, German, and Swiss German.
+        </p>
+        <p className="mb-4">
+          You can reach me at jeanhayoz94 [at] gmail [dot] com.
         </p>
         
         <h3 className="text-xl font-semibold mb-2" id="contact">Contact</h3>
-        <p className="text-gray-600">
+        <p className="mb-4">
           Email: <a href="mailto:jeanhayoz94@gmail.com" className="text-accent hover:underline">jeanhayoz94 [at] gmail [dot] com</a>
           <br />
           GitHub: <a href="https://github.com/JHayoz" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JHayoz</a>

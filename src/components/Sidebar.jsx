@@ -22,7 +22,7 @@ const Sidebar = ({ sections, activeSection, setActiveSection, isSidebarOpen, set
                 onClick={() => handleNavClick(section)}
                 className={`w-full text-left py-2 px-3 rounded-md transition-all duration-200 
                   ${activeSection === section 
-                    ? 'bg-gray-200 text-accent font-semibold dark:bg-accent dark:text-white'
+                    ? 'bg-gray-200 text-accent font-semibold dark:bg-accent dark:text-gray-700'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`
                 }
               >
