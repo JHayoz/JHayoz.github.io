@@ -1,6 +1,5 @@
 {
   "name": "mywebsite",
-  "homepage": "https://jhayoz.github.io/my-personal-site/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
